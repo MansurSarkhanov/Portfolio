@@ -19,6 +19,7 @@ dependencies:
   responsive_framework: ^1.4.0
   fl_chart: ^0.62.0
   flutter_svg: ^2.0.5
+  lottie: ^3.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -33,3 +34,4 @@ flutter:
   assets:
     - assets/Images/
     - assets/Icons/
+    - assets/Lottie/

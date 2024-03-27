@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-const cardBackgroundColor = Color(0xFF21222D);
+const cardBackgroundColor = Color(0xFF306688);
+const gradiendColor = Color(0xFF062133);
 const primaryColor = Color(0xFF2697FF);
 const secondaryColor = Color(0xFFFFFFFF);
 const backgroundColor = Color(0xFF15131C);

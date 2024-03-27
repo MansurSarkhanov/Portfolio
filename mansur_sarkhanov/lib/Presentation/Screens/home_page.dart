@@ -29,11 +29,8 @@ class HomePage extends StatelessWidget {
         child: Row(
           children: [
             if (isDesktop)
-              const Expanded(
-                flex: 2,
-                child: SizedBox(
+              const SizedBox(
                   child: SideMenuWidget(),
-                ),
               ),
             const Expanded(
               flex: 7,
