@@ -66,7 +66,7 @@ class SideMenuItem extends StatelessWidget {
       child: Container(
         decoration: const BoxDecoration(color: Color(0xFF181725), borderRadius: BorderRadius.all(Radius.circular(6))),
         child: Padding(
-          padding: const EdgeInsets.all(4.0),
+          padding: const EdgeInsets.all(6.0),
           child: Icon(
             iconData,
             color: Colors.white,

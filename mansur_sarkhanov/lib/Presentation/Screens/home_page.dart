@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 import '../../Utility/responsive.dart';
-import '../Components/dashboard_widget.dart';
 import '../Components/side_menu_widget.dart';
 import '../Components/summary_widget.dart';
 
@@ -26,21 +26,32 @@ class HomePage extends StatelessWidget {
             )
           : null,
       body: SafeArea(
-        child: Row(
+        child: Stack(
           children: [
-            if (isDesktop)
-              const SizedBox(
-                  child: SideMenuWidget(),
+            Container(
+              decoration: const BoxDecoration(
+                  color: Colors.black, gradient: RadialGradient(colors: [Colors.blue, Colors.black])),
+              child: Center(
+                child: Lottie.asset('assets/Lottie/lottie_earth.json'),
               ),
-            const Expanded(
-              flex: 7,
-              child: DashboardWidget(),
             ),
-            if (isDesktop)
-              const Expanded(
-                flex: 3,
-                child: SummaryWidget(),
-              ),
+            Row(
+              children: [
+                if (isDesktop)
+                  const SizedBox(
+                    child: SideMenuWidget(),
+                  ),
+                // const Expanded(
+                //   flex: 7,
+                //   child: DashboardWidget(),
+                // ),
+                // if (isDesktop)
+                //   const Expanded(
+                //     flex: 3,
+                //     child: SummaryWidget(),
+                //   ),
+              ],
+            ),
           ],
         ),
       ),
