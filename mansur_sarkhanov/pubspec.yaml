@@ -20,6 +20,8 @@ dependencies:
   fl_chart: ^0.62.0
   flutter_svg: ^2.0.5
   lottie: ^3.1.0
+  firebase_core: ^2.27.2
+  google_fonts: ^6.2.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
