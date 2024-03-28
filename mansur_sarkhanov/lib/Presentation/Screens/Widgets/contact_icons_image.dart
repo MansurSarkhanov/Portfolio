@@ -8,6 +8,7 @@ class ContactIconsImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
+      width: 30,
       icon,
     );
   }

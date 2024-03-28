@@ -1,4 +1,4 @@
-enum IconPath { facebook, github, instagram, twitter }
+enum IconPath { face, git, insta, twit, link }
 
 extension IconPatExt on IconPath {
   String toPathSvg() {

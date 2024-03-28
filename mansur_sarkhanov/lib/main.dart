@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: router,
-      theme: ThemeData(textTheme: GoogleFonts.puppiesPlayTextTheme()),
+      theme: ThemeData(textTheme: GoogleFonts.poppinsTextTheme()),
       title: 'Mansur Sarkhanov',
     );
   }
