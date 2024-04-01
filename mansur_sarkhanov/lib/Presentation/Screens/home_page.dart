@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:mansur_sarkhanov/Core/Constants/colors.dart';
-import 'package:mansur_sarkhanov/Core/Constants/sized_boxs.dart';
-import 'package:mansur_sarkhanov/Presentation/Components/contact_card.dart';
 import 'package:mansur_sarkhanov/Presentation/Components/welcome_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,23 +12,49 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: AppColors.backColor,
-      body: Padding(
-        padding: const EdgeInsets.all(32.0),
-        child: Column(
-          children: [
-            Row(
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 32.0, right: 32, top: 28),
+            child: StaggeredGrid.count(
+              crossAxisCount: 4,
+              mainAxisSpacing: 28,
+              crossAxisSpacing: 28,
               children: [
-                const Expanded(child: WelcomeCard()),
-                sizedBoxW(28),
-                const Expanded(child: WelcomeCard()),
-                sizedBoxW(28),
-                const Expanded(child: WelcomeCard()),
+                StaggeredGridTile.count(
+                  crossAxisCellCount: 1,
+                  mainAxisCellCount: 2,
+                  child: Container(
+                    color: Colors.red,
+                  ),
+                ),
+                StaggeredGridTile.count(
+                  crossAxisCellCount: 2,
+                  mainAxisCellCount: 1,
+                  child: Container(
+                    color: Colors.blue,
+                  ),
+                ),
+                const StaggeredGridTile.count(crossAxisCellCount: 1, mainAxisCellCount: 1, child: WelcomeCard()),
+                StaggeredGridTile.count(
+                  crossAxisCellCount: 1,
+                  mainAxisCellCount: 1,
+                  child: Container(
+                    color: Colors.orange,
+                  ),
+                ),
+                StaggeredGridTile.count(
+                  crossAxisCellCount: 2,
+                  mainAxisCellCount: 2,
+                  child: Container(
+                    color: Colors.pink,
+                  ),
+                ),
+                
+               
               ],
             ),
-            const ContactCard(),
-          ],
-        ),
-      ),
+          ),
+        )
     );
   }
 }
